@@ -1,0 +1,26 @@
+---
+title: "p8105_hw5_yz3297"
+author: "Yue Zhao"
+date: "2018年11月6日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## R Markdown
+
+
+```{r}
+data_name= list.files(path = "./data", pattern = NULL, all.files = FALSE,
+           full.names = FALSE, recursive = FALSE,
+           ignore.case = FALSE, include.dirs = FALSE, no.. = FALSE)
+
+df1= map_df(data_name, read_csv(paste0("./data",data_name)))
+
+
+```
+
+
